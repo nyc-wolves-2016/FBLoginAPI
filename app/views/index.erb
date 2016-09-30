@@ -1,0 +1,36 @@
+<%= erb(:_errors) %>
+<form class="" action="users" method="post">
+    <fieldset>
+        <legend>
+            Sign Up with Email
+        </legend>
+        <label for="">Name:</label><br>
+        <input type="text" name="user[name]" value=""><br><br>
+
+        <label for="">Gender:</label><br>
+        <input type="radio" name="user[gender]" value="male"> Male
+        <input type="radio" name="user[gender]" value="female"> Female
+        <input type="radio" name="user[gender]" value="other"> Other <br><br>
+
+        <label for="">Birthday:</label><br>
+        <input type="date" name="user[birthday]" value=""><br><br>
+
+        <label for="">Username:</label><br>
+        <input type="text" name="user[username]" value=""><br><br>
+
+        <label for="">Email:</label><br>
+        <input type="email" name="user[email]" value=""><br><br>
+
+        <label for="">Password</label><br>
+        <input type="password" name="user[password]" value=""><br><br>
+
+        <input type="submit"  value="Register">
+    </fieldset>
+    <br>
+    Or
+    <fieldset>
+        Sign Up With facebook
+        <fb:login-button scope="public_profile,user_birthday" onlogin="fbAsyncInit();" data-auto-logout-link="true">
+        </fb:login-button>
+    </fieldset>
+</form>
